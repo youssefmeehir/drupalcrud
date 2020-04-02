@@ -1,0 +1,31 @@
+ymehir.content:
+  path: '/ymehir'
+  defaults:
+    _controller: 'Drupal\ymehir\Controller\Controller::content'
+    _title: 'Ma première page dans mon premier module en Drupal8'
+  requirements:
+    _permission: 'access content'
+
+ymehir.form_condidature:
+  path: '/ymehir/candidature'
+  defaults:
+    _title: 'Formulaire de candidature'
+    _form: 'Drupal\ymehir\Form\CandidatureForm'
+  requirements:
+    _permission: 'content access'
+
+ymehir.condidature_display:
+  path: '/ymehir/display'
+  defaults:
+    _controller: '\Drupal\ymehir\Controller\Controller::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+ymehir.form_delete:
+  path: '/ymehir/candidature/delete/{id}'
+  defaults:
+    _title: 'Formulaire de candidature'
+    _form: 'Drupal\ymehir\Form\DeleteForm'
+  requirements:
+    _permission: 'content access'

@@ -1,0 +1,24 @@
+<?php
+function ymehir_update_8703() {
+  $database = \Drupal::database();
+$schema = $database->schema();
+  $table_name = "ymehir";
+$table_schema = [
+    'description' => 'description for database update',
+    'fields' => [
+      'id' => [ 'type' => 'serial', 'not null' => TRUE],
+      'civilite' => ['type' => 'varchar', 'length'=> 25, 'not null' => TRUE],
+      'nom' => ['type' => 'varchar', 'length'=> 25, 'not null' => TRUE],
+      'prenom' => ['type' => 'varchar', 'length'=> 25, 'not null' => TRUE],
+      'telephone' => ['type' => 'varchar', 'length'=> 15, 'not null' => TRUE],
+      'mail' => [ 'type' => 'varchar', 'length'=> 25, 'not null' => TRUE],
+      'dateNaissance' => [ 'type' => 'varchar', 'length'=> 15, 'not null' => TRUE],
+      'etablissement' => [ 'type' => 'varchar', 'length'=> 25, 'not null' => TRUE]
+    ],
+    'primary key' => ['id']
+  ];
+$schema->createTable($table_name, $table_schema);
+}
+
+
+

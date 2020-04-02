@@ -1,0 +1,6 @@
+ymehir.content:
+  title: 'content ymehir'
+  route_name: ymehir.content
+  menu_name: main
+  description: 'to ymehir content page'
+  weight: 10
